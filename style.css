@@ -15,12 +15,13 @@ main {
   padding-top: 100px;
 }
 
+/* HEADER */
 header {
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
-  background-color: #fff;
+  background-color: #ddd;
   width: 100%;
   height: 100px;
 }
@@ -36,6 +37,10 @@ header .header-logo {
   padding: 20px 0;
 }
 
+.header-logo:hover {
+  background-color: #bbb;
+}
+
 header nav ul {
   margin: 0 auto;
   display: block;
@@ -45,7 +50,7 @@ header nav ul {
 header nav ul li {
   display: inline-block;
   float: left;
-  padding: 0 13px;
+  padding: 0 20px;
 }
 
 header nav ul li a {
@@ -57,6 +62,35 @@ header nav ul li a {
 
 header .header-cases {
   display: none;
+}
+/* DROPDOWN CRAGS */
+
+header nav ul li ul {
+  visibility: hidden;
+  display: none;
+  position: absolute;
+  transition: all 0.5 ease;
+  margin-top: 0px;
+  background-color: #ddd;
+}
+
+header nav ul li:hover > ul {
+  visibility: visible;
+  display: block;
+}
+
+header nav ul li a:hover {
+  color: #009;
+  text-decoration: underline;
+}
+
+.dropdown li:hover {
+  background-color: #bbb;
+}
+
+ul li ul li {
+  clear:both;
+  width: 80%;
 }
 
 /* Other design for the screen view*/
@@ -89,6 +123,12 @@ header .header-cases {
     border-left: 3px dashed #009;
     float: right;
     padding: 30px;
+  }
+
+  header .header-cases:hover {
+    background-color: #bbb;
+    color: #009;
+    text-decoration: underline;
   }
 }
 
@@ -139,6 +179,10 @@ header .header-cases {
   background-color: #66a3ff;
 }
 
+.index-boxes div:hover {
+  background-color: #5b92e5;
+}
+
 .index-boxes div h3 {
   font-family: Poppins;
   font-size: 24px;
@@ -180,7 +224,7 @@ header .header-cases {
   }
 
   .index-boxes div h3 {
-    line-height: 180px;
+    line-height: 230px;
   }
 }
 
@@ -195,6 +239,7 @@ header .header-cases {
   text-transform: uppercase;
   color: #111;
   text-align: center;
+  margin-top: 20px;
 }
 
 .cases-boxes .wrapper div {
@@ -202,6 +247,10 @@ header .header-cases {
   height: 100px;
   background-color: #66a3ff;
   margin-top: 20px;
+}
+
+.cases-boxes .wrapper div:hover {
+  background-color: #5b92e5;
 }
 
 .cases-boxes .wrapper p {
@@ -222,8 +271,9 @@ header .header-cases {
     margin: 30px 15px 0px;
     background-color: #66a3ff;
   }
+
   .cases-boxes .wrapper p {
-    line-height: 270px;
+    line-height: 300px;
   }
 }
 
@@ -257,6 +307,7 @@ header .header-cases {
   text-transform: uppercase;
   color: #111;
   text-align: center;
+  padding: 20px;
 }
 
 .case-img img {
@@ -270,7 +321,7 @@ header .header-cases {
   font-size: 24px;
   text-transform: uppercase;
   color: #111;
-  padding-bottom: 20px;
+  padding: 20px;
 }
 
 .case-img article p {
@@ -280,12 +331,19 @@ header .header-cases {
   color: #111;
   text-align: justify;
 }
+
 @media only screen and (min-width: 1000px) {
   .case-img article p {
     column-count: 3;
     column-gap: 30px;
   }
+  .case-img img {
+    height: 500px;
+    object-fit: cover;
+    object-position: 100% 0;
+  }
 }
+
 /* FOOTER */
 footer {
   width: calc(100% - 80px);
@@ -319,7 +377,6 @@ footer ul li a {
 .footer-icons {
   width: 50px;
   float: right;
-  margin-top: 20px;
 }
 
 .footer-icons img {
@@ -349,13 +406,14 @@ footer ul li a {
 }
 
 /* GALLERY */
- .gallery-links-h2 {
-   font-family: Poppins;
-   font-size: 24px;
-   text-transform: uppercase;
-   color: #111;
-   text-align: center;
- }
+.gallery-links-h2 {
+  font-family: Poppins;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #111;
+  text-align: center;
+  margin-top: 20px;
+}
 
 .gallery-links {
   display: flex;
@@ -372,9 +430,48 @@ footer ul li a {
   width: 100%;
 }
 
+
+
 @media only screen and (min-width: 762px) {
   .gallery-img {
     flex-basis: 300px;
     margin: 20px;
   }
+  .gallery-img img {
+    opacity: 0.6;
+  }
+  .gallery-img img:hover {
+    opacity: 1;
+  }
+}
+ /* CONTACT */
+
+.contact-h2 {
+  font-family: Poppins;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #111;
+  text-align: center;
+  margin-top: 20px;
+}
+.contact-data {
+  display: flex;
+}
+.contact-data div {
+  flex:50%;
+  padding: 20px;
+}
+
+
+.contact-h2 h3 {
+  font-size: 18px;
+  padding: 10px;
+}
+
+.contact-h2 p {
+  font-family: Poppins;
+  font-size: 16px;
+  line-height: 24px;
+  color: #111;
+  text-align: justify;
 }
